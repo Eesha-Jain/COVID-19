@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>COVID-19</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="images/logo.png">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!--Hambuger Menu-->
+    <script src="https://kit.fontawesome.com/6981eea73f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>COVID-19</h1>
+
+    <ul class="navigation-bar" id="navBar">
+        <li class="nav-item"><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a></li>
+
+        <li class="nav-item tab first"><a href="index.html">Home</a></li>
+        <li class="nav-item tab"><a href="about.html">About</a></li>
+        
+        <li class="nav-item tab"><a href="vaccine.html">Vaccine</a></li>
+        <li class="nav-item tab"><a class="active" href="resources.html">Resources</a></li>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navBar");
+                if (x.className === "navigation-bar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navigation-bar";
+                }
+            }
+        </script>
+    </ul>
+
+    <!--CONTENT-->
+    <div class="card">
+        <h4>Reliable Websites for Information</h4>
+        <ul>
+            <li><a href="https://www.who.int/" target="_blank">World Health Organization (WHO)</a></li>
+            <li><a href="https://www.cdc.gov/" target="_blank">Centers for Disease Control and Prevention (CDC)</a></li>
+            <li><a href="https://www.fda.gov/" target="_blank">Food and Drug Administration (FDA)</a></li>
+            <li><a href="https://www.coronavirus.gov/" target="_blank">Coronavirus.gov</a></li>
+            <li><a href="https://www.nih.gov/coronavirus" target="_blank">National Institutes of Health (NIH)</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/sars-cov-2/" target="_blank">National Library of Medicine (NIH)</a></li>
+            <li><a href="https://www.google.com/search?q=covid-19&rlz=1C1GCEA_enUS916US916&oq=covid-19&aqs=chrome.0.69i59j35i39l2j69i59j69i60l4.1889j0j4&sourceid=chrome&ie=UTF-8&surl=1&safe=active&ssui=on" target="_blank">Google</a></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h4>Other Places</h4>
+        <ul>
+            <li>Local Health Officials</li>
+            <li>Government Workers</li>
+            <li>Local Trustworthy Websites</li>
+        </ul>
+    </div>
+</body>
+
+</html>

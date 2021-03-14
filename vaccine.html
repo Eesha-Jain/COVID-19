@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>COVID-19</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="images/logo.png">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!--Hambuger Menu-->
+    <script src="https://kit.fontawesome.com/6981eea73f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>COVID-19</h1>
+
+    <ul class="navigation-bar" id="navBar">
+        <li class="nav-item"><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a></li>
+
+        <li class="nav-item tab first"><a href="index.html">Home</a></li>
+        <li class="nav-item tab"><a href="about.html">About</a></li>
+        
+        <li class="nav-item tab"><a class="active" href="vaccine.html">Vaccine</a></li>
+        <li class="nav-item tab"><a href="resources.html">Resources</a></li>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navBar");
+                if (x.className === "navigation-bar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navigation-bar";
+                }
+            }
+        </script>
+    </ul>
+
+    <!--CONTENT-->
+    <div class="card row">
+        <div class="left">
+            <h4>Getting a Vaccine</h4>
+            <p>Getting COVID-19 may offer some natural protection, known as immunity. But experts don’t know how long this protection lasts, and the risk of severe illness and death from COVID-19 far outweighs any benefits of natural immunity. COVID-19 vaccination will help <span style="color: red; font-weight: 700;">protect</span> you by creating an antibody response without having to experience sickness.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/Vaccine.png">
+            <p>Information from <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html" target="_blank">CDC</a></p>
+        </div>
+    </div>
+
+    <div class="card row">
+        <div class="left">
+            <h4>How Do They Work?</h4>
+            <p>In a normal vaccine, you are injected with traces of the pathogen. They are weakened and come in smaller amounts so that you won't become sick with the disease. During this process, the immune system will learn how to fight the pathogen. First, it normally tries brute force. It sees which antibodies work against the pathogen. This might take a while, so having the immune system prepare this process beforehand is useful. After your body has defeated the pathogen, memory cells in your immune system remember which antibodies were used. This means that when you encounter the real pathogen, your immune system will quickly recognize the pathogen and which antibiotics it used, defeating the pathogen faster.</p><p> However, COVID-19 is hard to approach in this way because it is mutating as it passes from person to person. Because of this, we have taken another approach to developing a vaccine. In your body, you have DNA in each of your cells. Your cells use that DNA in order to create mRNA. mRNA can then be turned into proteins, which do everything in your cells. </p><p>In the COVID-19 vaccine, you are injected with an artifical mRNA that codes for the COVID-19 protein. It will go into your cell and use your cell in order to make this protein. Then, the immune system will respond.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/mRNA.png">
+            <p>Information from Multiple Sources, including <a href="https://www.cdc.gov/vaccines/covid-19/hcp/mrna-vaccine-basics.html" target="_blank">CDC</a> and <a href="https://www.health.harvard.edu/blog/why-are-mrna-vaccines-so-exciting-2020121021599">Harvard</a></p>
+        </div>
+    </div>
+
+    <div class="card row">
+        <div class="left">
+            <h4>The Two Vaccines</h4>
+            <p>There are in fact two vaccines that are being used to treat COVID-19: The Pfizer and Moderna vaccines. They were both approved by the FDA and are being currently used to treat COVID-19.</p>
+
+            <p>What are the differences and similarities between these two diseases? They are both shown to be over 94% effective for different age groups / genders. They both use mRNA and don't have severe side effects (they wash away quickly).</p>
+
+            <p>The difference between the vaccines come on how they are stored and transported. Pfizer needs -94deg F while Moderna needs -4deg F. They are authorized for different age groups, and the two doses are different days apart. Pfizer is 21 days whereas Moderna needs 28 between both doses.</p>
+
+            <p>However, these are subtle differences as both are equally effective in tackling the pandemic!</p>
+        </div>
+
+        <div class="right">
+            <img src="images/Compare.png">
+            <p>Information from <a href="https://abcnews.go.com/Health/comparing-pfizer-moderna-covid-19-vaccines/story?id=74787434" target="_blank">ABC News</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

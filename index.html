@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>COVID-19</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="images/logo.png">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!--Hambuger Menu-->
+    <script src="https://kit.fontawesome.com/6981eea73f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>COVID-19</h1>
+
+    <ul class="navigation-bar" id="navBar">
+        <li class="nav-item"><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a></li>
+
+        <li class="nav-item tab first"><a class="active" href="index.html">Home</a></li>
+        <li class="nav-item tab"><a href="about.html">About</a></li>
+        
+        <li class="nav-item tab"><a href="vaccine.html">Vaccine</a></li>
+        <li class="nav-item tab"><a href="resources.html">Resources</a></li>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navBar");
+                if (x.className === "navigation-bar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navigation-bar";
+                }
+            }
+        </script>
+    </ul>
+
+
+    <div class="card row">
+        <div class="left">
+            <h4>What is COVID-19?</h4>
+            <p>Coronavirus disease (COVID-19) is an <span style="color: red; font-weight: 700;">infectious disease</span> caused by a newly discovered coronavirus. Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/COVID.png">
+            <p>Information from <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="_blank">World Health Organization</a></p>
+        </div>
+    </div>
+
+    <div class="card row">
+        <div class="left">
+            <h4>Impact of COVID-19</h4>
+            <p>The COVID-19 pandemic has led to a <span style="color: red; font-weight: 700;">dramatic loss of human life worldwide</span> and presents an unprecedented challenge to public health, food systems and the world of work. The economic and social disruption caused by the pandemic is devastating: tens of millions of people are at risk of falling into extreme poverty, while the number of undernourished people, currently estimated at nearly 690 million, could increase by up to 132 million by the end of the year.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/Effects.png">
+            <p>Information from <a href="https://www.who.int/news/item/13-10-2020-impact-of-covid-19-on-people's-livelihoods-their-health-and-our-food-systems" target="_blank">World Health Organization</a></p>
+        </div>
+    </div>
+
+    <div class="card row">
+        <div class="left">
+            <h4>COVID-19 Effect</h4>
+            <p>Over 72,778,813 Cases Worldwide</p>
+            <p>Over 1,619,399 Deaths Worldwide</p>
+
+            <p>Authorities in 217 countries and territories have reported about <span style="color: red; font-weight: 700;">72.8 million</span> Covid‑19 cases and 1.6 million deaths since China reported its first cases to the World Health Organization (WHO) in December.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/DottedMap.PNG">
+            <p>Information from <a href="https://www.cnn.com/interactive/2020/health/coronavirus-maps-and-cases/" target="_blank">CNN's Data Tracker</a></p>
+        </div>
+    </div>
+
+    <div class="card row">
+        <div class="left">
+            <h4>Getting a Vaccine</h4>
+            <p>Getting COVID-19 may offer some natural protection, known as immunity. But experts don’t know how long this protection lasts, and the risk of severe illness and death from COVID-19 far outweighs any benefits of natural immunity. COVID-19 vaccination will help <span style="color: red; font-weight: 700;">protect</span> you by creating an antibody response without having to experience sickness.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/Vaccine.png">
+            <p>Information from <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/vaccine-benefits.html" target="_blank">CDC</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

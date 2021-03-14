@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>COVID-19</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="map.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="images/logo.png">
+
+	<!--Fonts-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+	<!--Hambuger Menu-->
+	<script src="https://kit.fontawesome.com/6981eea73f.js" crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+    <!--Map-->
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"></script>
+</head>
+
+<body>
+	<h1>COVID-19</h1>
+
+	<ul class="navigation-bar" id="navBar">
+		<li class="nav-item"><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+        </a></li>
+
+        <li class="nav-item tab first"><a href="index.html">Home</a></li>
+        <li class="nav-item tab"><a href="about.html">About</a></li>
+        <li class="nav-item tab"><a class="active" href="numbers.html">Numbers</a></li>
+        <li class="nav-item tab"><a href="vaccine.html">Vaccine</a></li>
+        <li class="nav-item tab"><a href="rontact.html">Resources</a></li>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navBar");
+                if (x.className === "navigation-bar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navigation-bar";
+                }
+            }
+        </script>
+    </ul>
+    <br>
+
+    <script>
+        var width = 700
+        var height = 580
+
+        var worldMap = "";
+
+        var casesData = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv";
+
+        //Svg Canvas
+        var svg = d3.select( "body" )
+            .append( "svg" )
+            .attr( "width", width)
+            .attr( "height", height);
+
+        //G = all geometric shapes
+        var g = svg.append("g")
+
+        //Set projection parameters
+        var projection = d3.geoAlbers()
+            .scale(100)
+            .rotate( [71.057,0] ) //Long
+            .center( [0, 42.313] ) //Lat
+            .translate(width/2, height/2);
+        
+        //Screen path
+        var geoPath = d3.geoPath()
+            .projection(projection);
+        
+        //Connection svg to data
+        g.selectAll("path")
+            .data(world_geojson.features)
+            .enter()
+            .append("path")
+            .attr("fill", "#ccc")
+            .attr("stroke", "red")
+            .attr("d", geoPath)
+
+        //http://duspviz.mit.edu/d3-workshop/mapping-data-with-d3/
+    </script>
+</body>
+
+</html>

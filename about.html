@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>COVID-19</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="images/logo.png">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!--Hambuger Menu-->
+    <script src="https://kit.fontawesome.com/6981eea73f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>COVID-19</h1>
+
+    <ul class="navigation-bar" id="navBar">
+        <li class="nav-item"><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a></li>
+
+        <li class="nav-item tab first"><a href="index.html">Home</a></li>
+        <li class="nav-item tab"><a  class="active" href="about.html">About</a></li>
+        
+        <li class="nav-item tab"><a href="vaccine.html">Vaccine</a></li>
+        <li class="nav-item tab"><a href="resources.html">Resources</a></li>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navBar");
+                if (x.className === "navigation-bar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navigation-bar";
+                }
+            }
+        </script>
+    </ul>
+
+    <!--CONTENT-->
+    <div class="card row">
+        <div class="left">
+            <h4>What is COVID-19?</h4>
+            <p>Coronavirus disease (COVID-19) is an <span style="color: red; font-weight: 700;">infectious disease</span> caused by a newly discovered coronavirus. Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes.</p>
+
+            <p>COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/Corona.png">
+            <p>Information from <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="_blank">World Health Organization</a></p>
+        </div>
+    </div>
+
+    <div class="card row">
+        <div class="left">
+            <h4>COVID-19 Anatomy</h4>
+            <p>Coronaviruses are large, enveloped, positive-stranded RNA viruses responsible for infecting a wide variety of mammalian and avian species. These viruses contain spike-like projections of glycoproteins on their surface, which appear like a crown under the electron microscope; hence, they are referred to as coronaviruses. The coronavirus genome is the largest among RNA viruses.</p>
+            <p>Viral entry into the host cell is a multistep process in which SARS-CoV-2 utilizes the receptor-binding domain (RBD) of the spike (S) glycoprotein to recognize angiotensin-converting enzyme 2 (ACE2) receptors on the human cells.</p>
+            <p>The S proteins, common among all coronaviruses, are a major target for eliciting antibodies. Their interaction with hACE2 transmembrane proteins can infect human cells. Therefore, structural and molecular details of S protein and its interactions with cognate receptors would be vital in developing vaccines and antiviral drugs against SARS-CoV-2.</p>
+        </div>
+
+        <div class="right">
+            <img src="images/Virus.png">
+            <p>Information from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7444525/#:~:text=Coronaviruses%20are%20nonsegmented%2C%20enveloped%20viruses,the%20largest%20among%20RNA%20viruses." target="_blank">PMC</a></p>
+        </div>
+    </div>
+
+    <div class="card row">
+        <div class="left">
+            <h4>Symptoms</h4>
+            <p>Most common symptoms: fever, dry cough, tiredness.</p>
+            <p>Less common symptoms: aches and pains, sore throat, diarrhoea, conjunctivitis, headache, loss of taste or smell, a rash on skin, discolouration of fingers or toes.</p>
+            <p>Serious symptoms: difficulty breathing or shortness of breath, chest pain or pressure, loss of speech or movement.</p>
+
+            <p>On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days. </p>
+        </div>
+
+        <div class="right">
+            <img src="images/Symp.png">
+            <p>Information from <a href="https://www.who.int/health-topics/coronavirus#tab=tab_3" target="_blank">World Health Organization</a></p>
+        </div>
+    </div>
+
+    <div class="card row">
+        <div class="left">
+            <h4>COVID-19 Testing</h4>
+            <p>There are two types of tests:</p>
+            <p>- Diagnostic Test: do you actively have the coronavirus infection (moleculer - genetic testing, antigen - virus protein detection)</p>
+            <p>- Antibody Test: looks for antibodies made by immune system to fight the virus</p>
+            <p></p>
+            <p>Though the tests are getting better, they are still not 100% accurate. The test might be contaminated or the swab might not be an accurate sample</p>
+            <p>Antibody tests may provide quick results, but should not be used to diagnose an active infection. Antibody tests only detect antibodies the immune system develops in response to the virus, not the virus itself. It can take days to several weeks to develop enough antibodies to be detected in a test.</p>
+            <p>However, it is still wise to get COVID-19 tests, especially if you are highly suspectible</p>
+        </div>
+
+        <div class="right">
+            <img src="images/Testing.png">
+            <p>Information from <a href="https://www.fda.gov/consumers/consumer-updates/coronavirus-disease-2019-testing-basics" target="_blank">FDA</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

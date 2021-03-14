@@ -1,0 +1,50 @@
+<div id="graphContainer"></div>
+    <script>
+        anychart.onDocumentReady(function () {
+            //Preparing the Data
+            anychart.data.loadJsonFile ("https://static.anychart.com/git-storage/word-press/data/choropleth-map-tutorial/data.json", function (data) {
+                var geoData = data.records;
+                var sumCases = 0;
+                var numC;
+                var data = [];
+
+                for (var i = 0; i < geoData.length; i++) {
+                    numC = parseInt(geoData[i].cases);
+                    
+                    if ((geoData[i + 1]) != null && (geoData[i].geoId == geoData[i + 1].geoId)) {
+                        sumCases = sumCases + numC;
+                    } else {
+                        sumCases = sumCases + numC;
+                        data.push({ id: geoData[i].geoId, value: sumCases, title: geoData[i].countriesAndTerritories })
+                        sumCases = 0;
+                    }
+                }
+
+                var chart = anychart.map(data);
+                chart.geoData(anychart.maps.world);
+
+                //Making the graph itself
+                var series = chart.choropleth(data);
+                chart.title("COVID-19 Cases WorldWide");
+
+                ocs = anychart.scales.ordinalColor([
+                    { less: 99 },
+                    { from: 100, to: 999 },
+                    { from: 1000, to: 9999 },
+                    { from: 10000, to: 29999 },
+                    { from: 30000, to: 39000 },
+                    { from: 40000, to: 59000 },
+                    { from: 60000, to: 99999 },
+                    { greater: 100000 }
+                ])
+
+                ocs.colors(["rgb(252,245,245)", "rgb(241,219,216)","rgb(229,190,185)", "rgb(211,152,145)", "rgb(192,117,109)", "rgb(178,93,86)", "rgb(152,50,48)", "rgb(150,33,31)"]);
+
+                series.colorScale(ocs);
+                
+                //Put this all into html
+                chart.container("graphContainer");
+                chart.draw();
+                });
+        });
+    </script>

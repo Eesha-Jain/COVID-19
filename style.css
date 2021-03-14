@@ -1,0 +1,139 @@
+::-moz-selection {
+    background-color: #b9ebff;
+}
+
+::selection {
+    background-color: #b9ebff;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(236, 236, 236);
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    color: rgb(255, 72, 72);
+    font-family: "Staatliches";
+}
+
+h4 {
+    font-size: 20px;
+    font-family: "Patrick Hand", "Staatliches";
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/*COLUMNS*/
+.left {
+    width: 56%;
+    float: left;
+    margin-right:4%;
+}
+
+.right {
+    width: 40%;
+    float: left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+img {
+    width: 98%;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 110, 255);
+    font-weight: 300;
+}
+
+/*Navigation Bar*/
+.navigation-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 65);
+}
+
+.nav-item {
+    padding: 5px 1px;
+    float: left;
+    margin: 0px 2px;
+    list-style-type: none;
+}
+
+.nav-item a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.nav-item a.active {
+    background-color: #ff2121;
+}
+
+.nav-item a:hover {
+    background-color: #888888;
+}
+
+.navigation-bar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navigation-bar .tab {
+        display: none;
+    }
+
+    .navigation-bar a.icon {
+        float: left;
+        display: block;
+        color: white;
+    }
+
+    .navigation-bar.responsive {
+        position: relative;
+    }
+
+    .navigation-bar.responsive .first {
+        margin-top: 30px;
+    }
+    
+    .navigation-bar.responsive .nav-item {
+        padding: 13px 7px;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .navigation-bar.responsive a {
+        padding: 12px;
+        margin: 0px;
+    }
+}
+
+/*CARDS*/
+.card {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
